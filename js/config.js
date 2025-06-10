@@ -11,16 +11,19 @@ const CONFIG = {
     // Personal Information
     personal: {
         name: 'Jian Azul',
-        title: 'Computer Engineering Student',
-        university: 'UW TACOMA',
+        title: 'Software Developer & UX/UI Designer',
+        university: 'University of Washington Tacoma',
         email: 'your.email@gmail.com',
         phone: '+1234567890',
         phoneDisplay: '123-456-7890',
-        location: 'Your City, State, Country',
+        location: 'Tacoma, Washington, USA',
         address: {
-            city: 'TACOMA/SEATTLE',
-            state: 'WA',
+            line1: 'MLG 200',
+            line2: '',
+            city: 'Tacoma',
+            state: 'Washington',
             country: 'USA',
+            zip: '98402'
         }
     },
 
@@ -28,8 +31,8 @@ const CONFIG = {
     social: {
         github: 'https://github.com/jianazul',
         linkedin: 'https://linkedin.com/in/jianazul',
-        instagram: 'https://instagram.com/nuke.seattle',
-        email: 'mailto:jijoazul@gmail.com',
+        instagram: 'https://instagram.com/yourhandle',
+        email: 'mailto:your.jijoazul@gmail.com'
     },
 
     // File Paths
@@ -53,71 +56,119 @@ const CONFIG = {
 
     // Skills & Technologies
     skills: {
-        languages: ['Java', 'C++', 'C', 'PHP', 'Kotlin', 'Dart', 'Python', 'CSS', 'HTML', 'JavaScript'],
-        frameworks: ['Android', 'Flutter', 'ReactJs', 'GTK', 'Node.js', 'Express'],
-        tools: ['VSCode', 'Git', 'Docker', 'Linux', 'Firebase'],
+        languages: ['Java', 'C++', 'C', 'Python', 'CSS', 'HTML', 'JavaScript', 'Godot'],
+        frameworks: ['React', 'Node.js', 'ThreeJS'],
+        tools: ['VSCode', 'Git', 'Docker', 'Linux', 'Firebase', 'Figma', 'Adobe Creative Suite'],
         databases: ['MySQL', 'MongoDB', 'SQLite']
     },
 
     // Education Details
     education: [
         {
-            degree: 'B.Tech in Computer Science Engineering',
-            institution: 'Your University',
-            year: '2020-2024',
+            degree: 'BA in Computer Science with minor in Innovaiton and Design, Business Data Analytics',
+            institution: 'University of Washington Tacoma',
+            year: '2023-2025',
             status: 'Current',
-            result: 'Expected 2024'
+            result: 'Expected 2025'
         },
         {
-            degree: 'Diploma in Computer Engineering',
-            institution: 'Your College',
-            year: '2017-2020',
+            degree: 'Associates of Arts',
+            institution: 'Pierce College',
+            year: '2021-2023',
             status: 'Completed',
-            result: '86.06%'
-        },
-        {
-            degree: 'Secondary School Certificate',
-            institution: 'Your School',
-            year: '2016',
-            status: 'Completed',
-            result: 'First Class'
         }
     ],
 
-    // Projects (optional - can be expanded)
+    // Projects Portfolio
     projects: [
         {
-            name: 'Portfolio Website',
-            description: 'Interactive chatbot-style portfolio built with vanilla HTML, CSS, and JavaScript',
-            technologies: ['HTML', 'CSS', 'JavaScript'],
-            github: 'https://github.com/yourusername/portfolio',
-            demo: 'https://yourportfolio.com'
+            id: 'reconnect',
+            name: 'Re:connect',
+            subtitle: 'Retro-Inspired Terminal Game',
+            description: 'A nostalgic typing game built with JavaScript, featuring DOS-style interfaces, particle effects, and progressive difficulty. Developed in a 10-week sprint with a small dedicated team.',
+            technologies: ['JavaScript', 'HTML5 Canvas', 'CSS3', 'Web Audio API'],
+            features: [
+                'Pseudo-Terminal Launcher interface',
+                'Custom particle effects engine',
+                'Progressive difficulty system',
+                'Glitch visual effects for errors',
+                'Immersive sound design'
+            ],
+            github: 'https://github.com/yourusername/reconnect',
+            demo: 'https://www.youtube.com/watch?v=eFfwpp1MaYk',
+            images: [
+                'images/projects/reconnect-1.png',
+                'images/projects/reconnect-2.png'
+            ],
+            role: 'Lead Developer & UI Designer',
+            teamSize: 3,
+            duration: '10 weeks',
+            challenges: 'Balancing aesthetics, gameplay, and technical complexity within a tight schedule and smaller team size.',
+            learnings: [
+                'Full software development lifecycle',
+                'Small team collaboration and communication',
+                'JavaScript-based graphics programming',
+                'Project planning and documentation'
+            ]
+        },
+        {
+            id: 'microforest',
+            name: 'UW Tacoma Microforest',
+            subtitle: 'Environmental Education Signage Project',
+            description: 'Designed educational signage and website for a Miyawaki microforest on campus, focusing on biodiversity, climate change, and local tribal history.',
+            technologies: ['Research', 'Information Design', 'Web Design', 'Environmental Graphics'],
+            features: [
+                'Biodiversity and climate change education',
+                'Tacoma timber history integration',
+                'Local plant identification systems',
+                'Tribal land acknowledgment',
+                'QR code integration for deeper content'
+            ],
+            website: 'https://www.tacoma.uw.edu/microforest',
+            images: [
+                'images/projects/microforest-1.png',
+                'images/projects/microforest-2.png'
+            ],
+            role: 'Signage Designer & Researcher',
+            teamSize: 4,
+            duration: '1 semester',
+            client: 'Dr. Ruben at Urban@UW',
+            challenges: 'Creating a narrative that connects Japanese internment history, local tribal representation, and environmental education.',
+            learnings: [
+                'Research-driven design process',
+                'Stakeholder collaboration',
+                'Cultural sensitivity in design',
+                'Environmental storytelling'
+            ]
         }
-        // Add more projects here
     ],
 
     // Map Configuration
     map: {
-        embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238.63833262443757!2d74.19014864534314!3d16.865338763272877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1a7dcf40f5dd7%3A0xd7b69fe1fcfa9877!2zMTbCsDUxJzU1LjQiTiA3NMKwMTEnMjUuMyJF!5e0!3m2!1sen!2sin!4v1645079906766!5m2!1sen!2sin',
+        embedUrl: 'https://www.google.com/maps  /embed?pb=!1m18!1m12!1m3!1d2687.5756476477194!2d-122.43858248436582!3d47.24429597916242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549040d434e66c17%3A0x7b5e5f3a8354b9d1!2sUniversity%20of%20Washington%20Tacoma!5e0!3m2!1sen!2sus!4v1234567890',
         width: '100%',
         height: '200'
     },
 
     // Chatbot Responses Templates
     responses: {
-        intro: `Hello there 👋🏻,<br><br>My name is <span class="bold">{name}</span>.<br><br>I am a {title} at <span class="bold">{university} 👨🏻‍💻📚</span><br><br>I am eager to hear about potential career opportunities, so I would be pleased to chat about job openings in the engineering sphere.<br><br>Send <span class="bold">'help'</span> to know more about me.`,
+        intro: `Hello there 👋🏻,<br><br>My name is <span class="bold">{name}</span>.<br><br>I am a {title} at <span class="bold">{university} 👨🏻‍💻📚</span><br><br>I specialize in both software development and design, with experience in game development, environmental graphics, and web applications.<br><br>Send <span class="bold">'help'</span> to know more about me.`,
 
-        help: `<span class="bold">Send a keyword to get what you want to know about me...</span><br><br>Available commands:<br><br><span class="bold">'skills'</span> - to know my skills<br><span class="bold">'resume'</span> - to get my resume<br><span class="bold">'education'</span> - to get my education details<br><span class="bold">'address'</span> - to get my address<br><span class="bold">'contact'</span> - to get ways to connect with me<br><span class="bold">'projects'</span> - to get details of my projects<br><span class="bold">'clear'</span> - to clear conversation<br><span class="bold">'about'</span> - to know about this site`,
+        help: `<span class="bold">Send a keyword to get what you want to know about me...</span><br><br>Available commands:<br><br><span class="bold">'skills'</span> - to know my technical skills<br><span class="bold">'resume'</span> - to get my resume<br><span class="bold">'education'</span> - to get my education details<br><span class="bold">'projects'</span> - to see my project portfolio<br><span class="bold">'reconnect'</span> - details about my typing game<br><span class="bold">'microforest'</span> - details about my UX design project<br><span class="bold">'address'</span> - to get my location<br><span class="bold">'contact'</span> - to get ways to connect with me<br><span class="bold">'clear'</span> - to clear conversation<br><span class="bold">'about'</span> - to know about this site`,
 
-        skills: `I am currently pursuing a degree in Computer Science Engineering.<br><br><span class="bold">Programming Languages:</span><br>{languages}<br><br><span class="bold">Frameworks & Technologies:</span><br>{frameworks}<br><br><span class="bold">Tools & Environment:</span><br>{tools}<br><br><span class="bold">Databases:</span><br>{databases}`,
+        skills: `I have experience in both development and design.<br><br><span class="bold">Programming Languages:</span><br>{languages}<br><br><span class="bold">Frameworks & Technologies:</span><br>{frameworks}<br><br><span class="bold">Tools & Environment:</span><br>{tools}<br><br><span class="bold">Databases:</span><br>{databases}<br><br>I also have experience in UX/UI design, environmental graphics, and research-driven design processes.`,
 
         education: `<span class="bold">Current Education:</span><br>{currentEducation}<br><br><span class="bold">Previous Education:</span><br>{previousEducation}`,
 
-        about: `🛠️💻 This portfolio website is built using HTML, CSS and JavaScript from SCRATCH!<br><br>👨🏻‍💻 Designed and Developed by <a class="link" target="_blank" href="{githubLink}"><span class="bold">{name}</span></a> with ❤️<br><br>The chatbot interface provides an interactive way to explore my professional background and skills.`,
+        projects: `Here are some of my key projects:<br><br><div class="project-showcase"><div class="project-card"><h3>🎮 Re:connect</h3><p>A retro-inspired typing game with custom particle effects and DOS-style interface</p><div class="project-tags"><span>JavaScript</span><span>Game Dev</span><span>UI/UX</span></div><div class="project-links"><a href="#" onclick="Chatbot.processMessage('reconnect')">View Details</a></div></div><div class="project-card"><h3>🌲 UW Tacoma Microforest</h3><p>Environmental education signage integrating tribal history and climate education</p><div class="project-tags"><span>UX Design</span><span>Research</span><span>Environmental Graphics</span></div><div class="project-links"><a href="#" onclick="Chatbot.processMessage('microforest')">View Details</a></div></div></div><br>Want to see more? Check out my <a class="link" target="_blank" href="{githubLink}">GitHub</a>!`,
 
-        projects: `You want to check my projects? Then just jump into my Github Account to see my latest work!<br><br><div class="social-links"><a target="_blank" href="{githubLink}" class="social-item"><img src="images/github.svg" alt="GitHub"><span class="social-label">GitHub Profile</span></a></div>`,
+        reconnect: `<div class="project-detail"><h2>🎮 Re:connect - Retro Typing Game</h2><br><img src="images/projects/reconnect-demo.gif" alt="Re:connect Demo" class="project-image"><br><span class="bold">Overview:</span><br>A nostalgic typing game inspired by DOS interfaces and Fallout's Pip-Boy aesthetic. Built with a small team over 10 weeks, featuring custom particle effects and progressive difficulty.<br><br><span class="bold">Key Features:</span><br>• Pseudo-terminal launcher interface<br>• Custom-coded particle effects engine<br>• Glitch visuals for typing errors<br>• Progressive difficulty system<br>• Immersive retro sound design<br><br><span class="bold">Technologies:</span> JavaScript, HTML5 Canvas, CSS3, Web Audio API<br><span class="bold">Team Size:</span> 3 developers<br><span class="bold">Duration:</span> 10 weeks<br><span class="bold">My Role:</span> Lead Developer & UI Designer<br><br><span class="bold">Challenges & Learning:</span><br>Working with a smaller team taught me the importance of clear communication and efficient task distribution. I deepened my knowledge in JavaScript graphics programming and learned the full software development lifecycle.<br><br><a class="link" target="_blank" href="https://www.youtube.com/watch?v=eFfwpp1MaYk">🎥 View Demo</a></div>`,
 
-        default: `Hey I couldn't catch you...😢<br>Send <span class="bold">'help'</span> to know more about usage.<br><br>You can also try:<br>• skills<br>• education<br>• contact<br>• resume<br>• projects`
+        microforest: `<div class="project-detail"><h2>🌲 UW Tacoma Microforest Project</h2><br><img src="images/projects/microforest-signs.png" alt="Microforest Signage" class="project-image"><br><span class="bold">Overview:</span><br>Designed educational signage and website for a Miyawaki microforest on the UW Tacoma campus. This narrative-focused project weaves together Japanese internment history, local tribal representation, and environmental education.<br><br><span class="bold">Key Components:</span><br>• Biodiversity & Climate Change signage<br>• Tacoma Timber history integration<br>• Local plant identification systems<br>• Tribal land acknowledgment in Twulshootseed<br>• QR code integration for extended content<br><br><span class="bold">My Role:</span> Signage Designer & Researcher<br><span class="bold">Team Size:</span> 4 members<br><span class="bold">Client:</span> Dr. Ruben at Urban@UW<br><span class="bold">Duration:</span> 1 semester<br><br><span class="bold">Design Process:</span><br>The project required extensive research into local ecosystems, tribal history, and the Miyawaki reforestation method. I focused on creating accessible, educational content that respects cultural significance while promoting environmental awareness.<br><br><span class="bold">Impact:</span><br>The microforest and signage are now implemented on campus, serving as an educational resource for students and visitors.<br><br><a class="link" target="_blank" href="https://www.tacoma.uw.edu/microforest">🌐 Visit Project Website</a></div>`,
+
+        about: `🛠️💻 This portfolio website is built using HTML, CSS and JavaScript from SCRATCH!<br><br>👨🏻‍💻 Designed and Developed by <a class="link" target="_blank" href="{githubLink}"><span class="bold">{name}</span></a> with ❤️<br><br>The chatbot interface provides an interactive way to explore my professional background, combining my development skills with design sensibility. The site showcases both my technical abilities and my approach to user experience design.`,
+
+        default: `Hey I couldn't catch you...😢<br>Send <span class="bold">'help'</span> to know more about usage.<br><br>You can also try:<br>• projects<br>• skills<br>• education<br>• reconnect<br>• microforest<br>• contact<br>• resume`
     },
 
     // Commands and their aliases
@@ -130,6 +181,8 @@ const CONFIG = {
         contact: ['contact', 'social', 'reach', 'connect'],
         address: ['address', 'location', 'map', 'where'],
         projects: ['projects', 'work', 'portfolio', 'github'],
+        reconnect: ['reconnect', 'typing game', 'game', 'javascript game'],
+        microforest: ['microforest', 'uwt', 'signage', 'design', 'ux'],
         about: ['about', 'site', 'website', 'info'],
         clear: ['clear', 'reset', 'new', 'refresh']
     }

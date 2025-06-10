@@ -375,6 +375,128 @@
     }
 }
 
+/* Project Showcase Components */
+.project-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin: var(--spacing-sm) 0;
+}
+
+.project-card {
+    background-color: var(--bg-tertiary);
+    border-radius: 10px;
+    padding: var(--spacing-md);
+    margin: var(--spacing-sm) 0;
+    transition: var(--transition);
+    border-left: 4px solid var(--accent-green);
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-left-color: var(--accent-gold);
+}
+
+.project-card h3 {
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+}
+
+.project-card p {
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-tags span {
+    background-color: var(--bg-secondary);
+    color: var(--text-accent);
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.project-links {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.project-links a {
+    color: var(--accent-green);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.project-links a:hover {
+    color: var(--accent-gold);
+    text-decoration: underline;
+}
+
+/* Project Detail View */
+.project-detail {
+    background-color: var(--bg-tertiary);
+    border-radius: 10px;
+    padding: var(--spacing-lg);
+    margin: var(--spacing-sm) 0;
+    border-left: 4px solid var(--accent-gold);
+}
+
+.project-detail h2 {
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin-bottom: var(--spacing-md);
+    font-size: 1.3rem;
+}
+
+.project-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: var(--spacing-md) 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-detail .bold {
+    color: var(--accent-green);
+    font-weight: bold;
+    margin-top: var(--spacing-md);
+    display: block;
+}
+
+.project-detail ul {
+    list-style: none;
+    padding-left: 0;
+    margin: var(--spacing-sm) 0;
+}
+
+.project-detail ul li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.project-detail ul li::before {
+    content: "•";
+    color: var(--accent-green);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
 /* Button States */
 .btn-primary {
     background-color: var(--accent-green);

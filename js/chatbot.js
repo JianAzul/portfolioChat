@@ -88,6 +88,14 @@ const Chatbot = {
                 await this.sendProjectsMessage();
                 break;
 
+            case 'reconnect':
+                await this.sendReconnectProjectMessage();
+                break;
+
+            case 'microforest':
+                await this.sendMicroforestProjectMessage();
+                break;
+
             case 'about':
                 await this.sendAboutMessage();
                 break;
@@ -187,7 +195,7 @@ const Chatbot = {
     },
 
     /**
-     * Send projects message
+     * Send projects overview message
      */
     async sendProjectsMessage() {
         const templateData = {
@@ -198,6 +206,24 @@ const Chatbot = {
         const message = Utils.processTemplate(CONFIG.responses.projects, templateData);
         await UI.addMessageWithTyping(message, true);
         this.addToHistory('bot', message);
+    },
+
+    /**
+     * Send Re:connect project details
+     */
+    async sendReconnectProjectMessage() {
+        const message = CONFIG.responses.reconnect;
+        await UI.addMessageWithTyping(message, true);
+        this.addToHistory('bot', 'Re:connect project details');
+    },
+
+    /**
+     * Send Microforest project details
+     */
+    async sendMicroforestProjectMessage() {
+        const message = CONFIG.responses.microforest;
+        await UI.addMessageWithTyping(message, true);
+        this.addToHistory('bot', 'Microforest project details');
     },
 
     /**
@@ -362,6 +388,10 @@ const Chatbot = {
         const normalizedMessage = lastMessage.toLowerCase().trim();
 
         // Context-aware suggestions
+        if (normalizedMessage.includes('project')) {
+            suggestions.push('Tell me about Re:connect', 'Show me the microforest project');
+        }
+
         if (normalizedMessage.includes('skill') || normalizedMessage.includes('tech')) {
             suggestions.push('Tell me more about your projects');
         }
