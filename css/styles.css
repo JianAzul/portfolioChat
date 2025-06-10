@@ -147,7 +147,6 @@ body {
 }
 
 .message-content {
-    max-width: 70%;
     padding: 0.75rem 1rem;
     border-radius: var(--border-radius);
     position: relative;
@@ -156,12 +155,14 @@ body {
 }
 
 .message.sent .message-content {
+    max-width: 50%;
     background-color: var(--bg-message-sent);
     color: var(--text-primary);
     border-bottom-right-radius: 5px;
 }
 
 .message.received .message-content {
+    max-width: 85%;
     background-color: var(--bg-message-received);
     color: var(--text-primary);
     border-bottom-left-radius: 5px;
@@ -291,4 +292,48 @@ button:focus,
 input:focus {
     outline: 2px solid var(--accent-green);
     outline-offset: 2px;
+}
+
+@media screen and (min-width: 1024px) {
+    /* Desktop: Even more space for bot messages */
+    .message.sent .message-content {
+        max-width: 40%;
+    }
+
+    .message.received .message-content {
+        max-width: 80%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Tablet */
+    .message.sent .message-content {
+        max-width: 45%;
+    }
+
+    .message.received .message-content {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* Mobile: Still prioritize bot content but account for small screens */
+    .message.sent .message-content {
+        max-width: 60%;
+    }
+
+    .message.received .message-content {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Small mobile: Maximum space efficiency */
+    .message.sent .message-content {
+        max-width: 65%;
+    }
+
+    .message.received .message-content {
+        max-width: 95%;
+    }
 }
