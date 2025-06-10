@@ -1,0 +1,473 @@
+/* =============================================================================
+   RESPONSIVE STYLES - Media queries and responsive design
+   ============================================================================= */
+
+/* Desktop Styles */
+@media screen and (min-width: 1024px) {
+    :root {
+        --container-width: 50vw;
+        --header-height: 80px;
+        --input-height: 90px;
+    }
+
+    body {
+        max-width: 800px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .header {
+        padding: var(--spacing-lg);
+    }
+
+    .profile-pic {
+        width: 60px;
+        height: 60px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.3rem;
+    }
+
+    .messages {
+        padding: var(--spacing-lg);
+        /* Custom scrollbar for desktop */
+        scrollbar-width: thin;
+        scrollbar-color: var(--text-secondary) transparent;
+    }
+
+    .messages::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .message-content {
+        max-width: 60%;
+    }
+
+    .input-area {
+        padding: var(--spacing-lg);
+    }
+
+    .message-input {
+        font-size: 1.1rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .send-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Enhanced hover effects for desktop */
+    .social-item.phone-item:hover .phone-number {
+        display: block;
+        animation: fadeInUp 0.3s ease;
+    }
+
+    .modal-content {
+        max-width: 70%;
+        max-height: 80%;
+    }
+
+    .modal-image {
+        max-width: 600px;
+    }
+
+    /* Better spacing for larger screens */
+    .social-links {
+        gap: var(--spacing-md);
+    }
+
+    .education-item {
+        padding: var(--spacing-lg);
+    }
+
+    .project-card {
+        padding: var(--spacing-lg);
+    }
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    :root {
+        --container-width: 70vw;
+    }
+
+    body {
+        max-width: 600px;
+    }
+
+    .message-content {
+        max-width: 65%;
+    }
+
+    .profile-pic {
+        width: 55px;
+        height: 55px;
+    }
+
+    .messages {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .modal-image {
+        max-width: 450px;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+    :root {
+        --container-width: 100vw;
+        --header-height: 60px;
+        --input-height: 70px;
+        --spacing-md: 0.75rem;
+    }
+
+    .header {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .profile-pic {
+        width: 45px;
+        height: 45px;
+    }
+
+    .profile-info h1 {
+        font-size: 1rem;
+    }
+
+    .profile-info .status {
+        font-size: 0.8rem;
+    }
+
+    .messages {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    .message-content {
+        max-width: 85%;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .message-time {
+        font-size: 0.7rem;
+    }
+
+    .input-area {
+        padding: var(--spacing-sm) var(--spacing-md);
+        gap: var(--spacing-sm);
+    }
+
+    .message-input {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .send-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Adjust modal for mobile */
+    .modal-content {
+        max-width: 95%;
+        max-height: 85%;
+    }
+
+    .close-modal {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+        top: -10px;
+        right: -10px;
+    }
+
+    /* Stack social items more efficiently */
+    .social-links {
+        gap: var(--spacing-sm);
+    }
+
+    .social-item {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    /* Smaller resume preview on mobile */
+    .resume-thumbnail {
+        height: 150px;
+    }
+
+    .resume-download {
+        padding: var(--spacing-sm);
+    }
+
+    /* Smaller map on mobile */
+    .map-container iframe {
+        height: 150px;
+    }
+
+    /* Adjust education timeline for mobile */
+    .education-item {
+        padding: var(--spacing-sm);
+        border-left-width: 3px;
+    }
+
+    .education-item:hover {
+        transform: translateX(3px);
+    }
+
+    /* Project cards more compact */
+    .project-card {
+        padding: var(--spacing-sm);
+    }
+
+    /* Skills tags wrap better */
+    .skill-tag {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.4rem;
+    }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+    :root {
+        --spacing-md: 0.5rem;
+        --spacing-sm: 0.25rem;
+    }
+
+    .header {
+        padding: var(--spacing-sm);
+    }
+
+    .profile-pic {
+        width: 40px;
+        height: 40px;
+    }
+
+    .profile-info h1 {
+        font-size: 0.95rem;
+    }
+
+    .messages {
+        padding: var(--spacing-sm);
+    }
+
+    .message-content {
+        max-width: 90%;
+        padding: 0.5rem 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .input-area {
+        padding: var(--spacing-sm);
+    }
+
+    .message-input {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.7rem;
+    }
+
+    .send-button {
+        width: 36px;
+        height: 36px;
+    }
+
+    .social-item {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .resume-thumbnail {
+        height: 120px;
+    }
+
+    .map-container iframe {
+        height: 120px;
+    }
+}
+
+/* Large Desktop Styles */
+@media screen and (min-width: 1440px) {
+    :root {
+        --container-width: 40vw;
+    }
+
+    body {
+        max-width: 900px;
+    }
+
+    .header {
+        padding: var(--spacing-xl);
+    }
+
+    .profile-pic {
+        width: 70px;
+        height: 70px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.4rem;
+    }
+
+    .messages {
+        padding: var(--spacing-xl);
+    }
+
+    .message-content {
+        max-width: 55%;
+        font-size: 1.05rem;
+    }
+
+    .input-area {
+        padding: var(--spacing-xl);
+    }
+
+    .message-input {
+        font-size: 1.2rem;
+        padding: 1.2rem 1.8rem;
+    }
+}
+
+/* Ultra-wide Screens */
+@media screen and (min-width: 1920px) {
+    :root {
+        --container-width: 30vw;
+    }
+
+    body {
+        max-width: 1000px;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .profile-pic,
+    .modal-image {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Landscape Mobile Orientation */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    :root {
+        --header-height: 50px;
+        --input-height: 60px;
+    }
+
+    .header {
+        padding: var(--spacing-xs) var(--spacing-md);
+    }
+
+    .profile-pic {
+        width: 35px;
+        height: 35px;
+    }
+
+    .profile-info h1 {
+        font-size: 0.9rem;
+    }
+
+    .profile-info .status {
+        font-size: 0.75rem;
+    }
+
+    .messages {
+        padding: var(--spacing-sm);
+    }
+
+    .input-area {
+        padding: var(--spacing-xs) var(--spacing-md);
+    }
+
+    .message-input {
+        padding: 0.4rem 0.6rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+        width: 100%;
+        height: auto;
+    }
+
+    .header,
+    .input-area {
+        display: none;
+    }
+
+    .chat-container {
+        background: none;
+        height: auto;
+    }
+
+    .messages {
+        padding: 0;
+    }
+
+    .message-content {
+        background-color: #f5f5f5 !important;
+        color: black !important;
+        border: 1px solid #ddd;
+        max-width: 100%;
+    }
+
+    .social-item,
+    .resume-preview,
+    .map-container {
+        background-color: #f9f9f9 !important;
+        border: 1px solid #ddd;
+    }
+
+    .modal {
+        display: none !important;
+    }
+}
+
+/* Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .loading-dots::after {
+        animation: none;
+        content: '...';
+    }
+
+    .typing-dot {
+        animation: none;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --bg-primary: #000000;
+        --bg-secondary: #1a1a1a;
+        --bg-tertiary: #333333;
+        --text-primary: #ffffff;
+        --text-secondary: #cccccc;
+        --accent-gold: #ffff00;
+        --accent-green: #00ff00;
+    }
+
+    .message-content {
+        border: 2px solid var(--text-secondary);
+    }
+
+    .social-item,
+    .resume-preview,
+    .project-card,
+    .education-item {
+        border: 2px solid var(--text-secondary);
+    }
+}
