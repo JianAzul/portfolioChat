@@ -96,6 +96,10 @@ const Chatbot = {
                 await this.sendMicroforestProjectMessage();
                 break;
 
+            case 'filmingtacoma':
+                await this.sendFilmingTacomaProjectMessage();
+                break;
+
             case 'about':
                 await this.sendAboutMessage();
                 break;
@@ -224,6 +228,15 @@ const Chatbot = {
         const message = CONFIG.responses.microforest;
         await UI.addMessageWithTyping(message, true);
         this.addToHistory('bot', 'Microforest project details');
+    },
+
+    /**
+     * Send Filming Tacoma project details
+     */
+    async sendFilmingTacomaProjectMessage() {
+        const message = CONFIG.responses.filmingtacoma;
+        await UI.addMessageWithTyping(message, true);
+        this.addToHistory('bot', 'Filming Tacoma project details');
     },
 
     /**
@@ -389,7 +402,7 @@ const Chatbot = {
 
         // Context-aware suggestions
         if (normalizedMessage.includes('project')) {
-            suggestions.push('Tell me about Re:connect', 'Show me the microforest project');
+            suggestions.push('Tell me about Re:connect', 'Show me the microforest project', 'Tell me about Filming Tacoma');
         }
 
         if (normalizedMessage.includes('skill') || normalizedMessage.includes('tech')) {
@@ -402,6 +415,14 @@ const Chatbot = {
 
         if (normalizedMessage.includes('contact') || normalizedMessage.includes('reach')) {
             suggestions.push('What\'s your location?');
+        }
+
+        if (normalizedMessage.includes('design') || normalizedMessage.includes('ux')) {
+            suggestions.push('Tell me about Filming Tacoma', 'Show me the microforest project');
+        }
+
+        if (normalizedMessage.includes('film') || normalizedMessage.includes('tacoma')) {
+            suggestions.push('filmingtacoma');
         }
 
         // Always include help
